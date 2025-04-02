@@ -10,7 +10,7 @@
 
 ### 快速使用
 
-go get -u github.com/FeatherStark/ttutils
+`go get -u github.com/FeatherStark/ttutils`
 
 ### cmd 执行系统命令
 
