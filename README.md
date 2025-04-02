@@ -8,6 +8,10 @@
 
 具体使用看方法注释即可。
 
+### 快速使用
+
+go get -u github.com/FeatherStark/ttutils
+
 ### cmd 执行系统命令
 
 ---
