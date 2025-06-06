@@ -1,4 +1,4 @@
-package ttutils
+package texec
 
 import (
 	"bytes"

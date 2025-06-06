@@ -27,7 +27,7 @@ Returns: CommandExecResult 命令执行结果
 ---
 
 ```go
-execResult := ttutils.CommandExecute("ipconfig")
+execResult := texec.CommandExecute("ipconfig")
 fmt.Println(execResult.Success)
 fmt.Println(execResult.CommandString)
 fmt.Println(execResult.Output)
@@ -52,7 +52,7 @@ Returns: jwt.MapClaims, error
 ```go
 jwtToken := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwidXNlcm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUxNjIzOTAyMn0.E1iIYCH3fs06Z9aEmDNaHOx9G-zeiqO2xtugPqaQHrQ"
 jwtSecret := "mysecret"
-claims, err := ttutils.JwtParseClaims(jwtToken, jwtSecret)
+claims, err := tjwt.JwtParseClaims(jwtToken, jwtSecret)
 if err != nil {
     fmt.Println(err.Error())
     return
@@ -87,13 +87,13 @@ Returns: *HttpRequestConfig HTTP 请求配置。
 ---
 
 ```go
-cfg := ttutils.RequestPostConfig("/post")
+cfg := trequest.RequestPostConfig("/post")
 cfg.Header.Store("Cookie", "user=admin;")
 cfg.Header.Store("Content-Type", "application/x-www-form-urlencoded")
 cfg.FollowRedirect = false
 cfg.VerifyTls = false
 cfg.Data = `hello`
-resp, err := ttutils.DoHttpRequest("https://httpbin.org/", cfg)
+resp, err := trequest.DoHttpRequest("https://httpbin.org/", cfg)
 if err != nil {
     fmt.Println(err)
     return

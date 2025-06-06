@@ -1,7 +1,8 @@
-package ttutils
+package tlogger
 
 import (
 	"fmt"
+	"github.com/FeatherStark/ttutils/ttime"
 	"github.com/logrusorgru/aurora"
 )
 
@@ -27,12 +28,12 @@ func LogDebugPrintln(msg string) {
 
 func logPrint(msg, level string) {
 	if level == "INFO" {
-		fmt.Println(aurora.Green("[+] " + GetNowTime() + " " + level + " " + msg))
+		fmt.Println(aurora.Green("[+] " + ttime.GetNowTime() + " " + level + " " + msg))
 	} else if level == "WARN" {
-		fmt.Println(aurora.Yellow("[#] " + GetNowTime() + " " + level + " " + msg))
+		fmt.Println(aurora.Yellow("[#] " + ttime.GetNowTime() + " " + level + " " + msg))
 	} else if level == "ERROR" {
-		fmt.Println(aurora.Red("[-] " + GetNowTime() + " " + level + " " + msg))
+		fmt.Println(aurora.Red("[-] " + ttime.GetNowTime() + " " + level + " " + msg))
 	} else if level == "DEBUG" {
-		fmt.Println(aurora.Blue("[~] " + GetNowTime() + " " + level + " " + msg))
+		fmt.Println(aurora.Blue("[~] " + ttime.GetNowTime() + " " + level + " " + msg))
 	}
 }

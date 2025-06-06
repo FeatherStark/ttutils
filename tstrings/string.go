@@ -1,4 +1,4 @@
-package ttutils
+package tstrings
 
 import (
 	"unicode"

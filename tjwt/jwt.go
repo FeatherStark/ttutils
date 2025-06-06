@@ -1,4 +1,4 @@
-package ttutils
+package tjwt
 
 import (
 	"errors"

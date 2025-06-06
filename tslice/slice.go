@@ -1,4 +1,4 @@
-package ttutils
+package tslice
 
 // SliceRemoveDuplicates 切片去重
 // Args: slice []string 切片

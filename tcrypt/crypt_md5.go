@@ -1,4 +1,4 @@
-package ttutils
+package tcrypt
 
 import (
 	"crypto/md5"

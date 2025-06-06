@@ -1,9 +1,10 @@
-package ttutils
+package trequest
 
 import (
 	"bytes"
 	"crypto/tls"
 	"fmt"
+	"github.com/FeatherStark/ttutils/trandom"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -177,7 +178,7 @@ func GetRandomUserAgent(userAgents []string) string {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15",
 		}
 	}
-	return userAgents[RandomNumber(0, len(userAgents)-1)]
+	return userAgents[trandom.RandomNumber(0, len(userAgents)-1)]
 }
 
 // GetHost 获取主机地址,协议+域名或IP。
